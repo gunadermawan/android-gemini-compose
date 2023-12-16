@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.gunder.gemini"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.gunder.gemini"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -51,7 +51,7 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.1")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
@@ -66,4 +66,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+//    gemini ai
+    implementation("com.google.ai.client.generativeai:generativeai:0.1.1")
 }
