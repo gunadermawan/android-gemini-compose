@@ -7,10 +7,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.ai.client.generativeai.type.content
+import com.gunder.gemini.BuildConfig
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
-    private val apiKey = "AIzaSyAE66Eni7v7cnIVF00kX_iipW3yLy4zYf0"
+    private val apiKey = BuildConfig.API_KEY
     private val geminiProModel by lazy {
         GenerativeModel(modelName = "gemini-pro", apiKey = apiKey).apply { startChat() }
     }
